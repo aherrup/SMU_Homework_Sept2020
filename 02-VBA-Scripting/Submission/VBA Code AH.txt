@@ -1,0 +1,94 @@
+
+
+Sub StockGuru():
+    
+    Dim CurrentS As String
+    Dim NextS As String
+    Dim TableRow As Double
+    Dim Volume As Double
+    Dim Close_Price As Double
+    Dim Yr_Price_Change As Double
+    Dim Yr_Percent_var As Double
+    Dim FirstPrice As Boolean
+    Dim lastRow As Double
+    Dim i As Double
+    
+    For Each ws In Worksheets
+    
+        TableRow = 2
+        Volume = 0
+        FirstPrice = True
+        lastRow = ws.Cells(Rows.Count, 1).End(xlUp).Row
+    
+    
+    
+        ws.Cells(1, 11).Value = "Ticker"
+        ws.Cells(1, 12).Value = "Yearly Change"
+        ws.Cells(1, 13).Value = "Percent Change"
+        ws.Cells(1, 14).Value = "Total Stock Volume"
+    
+    
+    
+
+    
+        For i = 2 To lastRow
+            CurrentS = ws.Cells(i, 1).Value
+            NextS = ws.Cells(i + 1, 1).Value
+            Volume = Volume + ws.Cells(i, 7).Value
+            Close_Price = ws.Cells(i, 6).Value
+        
+            If FirstPrice = True Then
+            Dim Open_Price As Double
+                Open_Price = ws.Cells(i, 3).Value
+                
+                FirstPrice = False
+                
+            End If
+        
+            If CurrentS <> NextS Then
+                FirstPrice = True
+                ws.Cells(TableRow, 11).Value = CurrentS
+                ws.Cells(TableRow, 14).Value = Volume
+            
+                Yr_Price_Change = Close_Price - Open_Price
+                ws.Cells(TableRow, 12).Value = Yr_Price_Change
+            
+                If Open_Price = 0 Then
+                    Yr_Percent_var =  (Yr_Price_Change / 0.0000001)
+               
+                Else
+                    Yr_Percent_var =  (Yr_Price_Change / Open_Price)
+                End If
+            
+            
+                ws.Cells(TableRow, 13).Value = Yr_Percent_var
+                ws.Cells(TableRow, 13).Style = "percent"
+            
+            
+            
+                If Yr_Price_Change > 0 Then
+                    ws.Cells(TableRow, 12).Interior.ColorIndex = 4
+                ElseIf Yr_Price_Change < 0 Then
+                    ws.Cells(TableRow, 12).Interior.ColorIndex = 3
+                Else
+                    ws.Cells(TableRow, 12).Interior.ColorIndex = 2
+            
+                End If
+            
+                TableRow = TableRow + 1
+            
+                Volume = 0
+            
+           
+            End If
+        
+       
+        
+        Next i
+    Next ws
+    
+        
+    
+End Sub
+
+
