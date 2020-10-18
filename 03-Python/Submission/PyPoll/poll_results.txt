@@ -1,0 +1,11 @@
+Election Results
+    ----------------------------------
+    Total votes: 3521001
+    ----------------------------------
+    Khan: had 63% of the votes (2218231)
+    Correy: had 20% of the votes (704200)
+    Li: had 14% of the votes (492940)
+    O'Tooley: had 3% of the votes (105630)
+    ----------------------------------
+    and the winner is..........
+    Khan with 2218231 votes!!!!!!
