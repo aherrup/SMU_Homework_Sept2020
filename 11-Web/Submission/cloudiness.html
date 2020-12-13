@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hw 11</title>
+    <!-- Bootstrap and Bootswatch CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/yeti/bootstrap.min.css" integrity="sha384-H4X+4tKc7b8s4GoMrylmy2ssQYpDHoqzPa9aKXbDwPoPUA3Ra8PA5dGzijN+ePnH" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JS for Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="index.html">Latitude Project</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  href="data.html">Data</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  href="comp.html">Comparisons</a>
+            </li>
+            
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Plots</a>
+                <div class="dropdown-menu">
+                <a class="dropdown-item"  href="maxTemp.html">Max Tempurature</a>
+                <a class="dropdown-item"  href="humidity.html">Humidity</a>
+                <a class="dropdown-item"  href="cloudiness.html">Cloudiness</a>
+                <a class="dropdown-item"  href="wind.html">Wind Speed</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row" style="margin-top:5%">
+            <div class="col-md-8" style="border: 3px solid rgb(91, 192, 222);">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Latitude and Cloudiness</h1>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class='col-md-12'>
+                            <img src="resources\assets\City Latitude vs Cloudiness.png">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class='col-md-12 col-sm-12'>
+                            <p>his chart is analyzing the relationship between the a said cities latitude and what the cloud coverage percent was on the first of November. From this data, we found that there was no correlation between what that days cloudiness was and the cities latitude.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    
+            <div class="col-md-4 d-flex flex-column"  style="border: 3px solid rgb(91, 192, 222);">
+                <div class="row align-self-start">
+                    <div class="col-md-12">
+                        <h1>Visualizations</h1>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row h-50 align-items-center">
+                    <div class="col-md-6 col-sm-6 " >
+                        <img src="resources\assets\City Latitude vs Cloudiness.png" style="width: 100%;border:2px solid #3c9a5f">
+                        <img src="resources\assets\City Latitude vs Temp.png" style="width: 100%;">
+                    </div>
+                    <div class="col-md-6 col-sm-6 ">
+                        <img src="resources\assets\City Latitude vs Humidity.png" style="width: 100%;">
+                        <img src="resources\assets\City Latitude vs Wind Speed.png" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
